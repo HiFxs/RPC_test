@@ -1,0 +1,285 @@
+2023-03-02 20:52:38.217 [main] INFO  c.x.nettyrpc.provider.config.ProviderPostProcessor - find provider service:com.example.graduate.provider.impl.TestService
+2023-03-02 20:52:38.694 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - start init server,port:1234
+2023-03-02 20:52:38.761 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - register services success
+2023-03-02 20:53:56.171 [main] INFO  c.x.nettyrpc.provider.config.ProviderPostProcessor - find provider service:com.example.graduate.provider.impl.TestService
+2023-03-02 20:53:56.656 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - start init server,port:1234
+2023-03-02 20:53:56.719 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - register services success
+2023-03-02 21:25:35.127 [provider-process1] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:6111f10b-bfdb-45f5-8e09-cf3aa0ee41f9
+2023-03-02 21:25:35.131 [provider-process1] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:6111f10b-bfdb-45f5-8e09-cf3aa0ee41f9:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:25:39.358 [provider-process2] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:af015005-7901-439e-ada7-7dcadb6a7cca
+2023-03-02 21:25:39.358 [provider-process2] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:af015005-7901-439e-ada7-7dcadb6a7cca:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:27:33.610 [nioEventLoopGroup-3-1] ERROR c.x.nettyrpc.provider.config.NettyServerHandler - exception:
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:27:43.602 [provider-process7] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:43562487-e62d-4fdb-9eda-4ffc547064ad
+2023-03-02 21:27:43.602 [provider-process7] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:43562487-e62d-4fdb-9eda-4ffc547064ad:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:27:44.421 [provider-process8] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:efc6e99c-45e0-407e-a70e-636bec4f3ef9
+2023-03-02 21:27:44.421 [provider-process8] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:efc6e99c-45e0-407e-a70e-636bec4f3ef9:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:29:01.036 [nioEventLoopGroup-3-2] ERROR c.x.nettyrpc.provider.config.NettyServerHandler - exception:
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:29:10.593 [provider-process12] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:7a53016e-eff0-466d-a558-87bce3ac2578
+2023-03-02 21:29:10.593 [provider-process12] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:7a53016e-eff0-466d-a558-87bce3ac2578:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:30:07.577 [nioEventLoopGroup-3-3] ERROR c.x.nettyrpc.provider.config.NettyServerHandler - exception:
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:30:33.861 [main] INFO  c.x.nettyrpc.provider.config.ProviderPostProcessor - find provider service:com.example.graduate.provider.impl.TestService
+2023-03-02 21:30:34.321 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - start init server,port:18317
+2023-03-02 21:30:34.388 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - register services success
+2023-03-02 21:31:33.406 [provider-process2] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:a0fef891-8c36-40e2-b368-1d49ef12522d
+2023-03-02 21:31:33.408 [provider-process2] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:a0fef891-8c36-40e2-b368-1d49ef12522d:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:33:39.682 [provider-process7] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:fd3034b5-2045-4fcd-9b3f-209865c9620d
+2023-03-02 21:33:39.682 [provider-process7] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:fd3034b5-2045-4fcd-9b3f-209865c9620d:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:34:08.277 [nioEventLoopGroup-3-1] ERROR c.x.nettyrpc.provider.config.NettyServerHandler - exception:
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:34:17.655 [provider-process9] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:e3fbaa9f-7df0-4155-a82d-6ce26c3a0f5e
+2023-03-02 21:34:17.655 [provider-process9] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:e3fbaa9f-7df0-4155-a82d-6ce26c3a0f5e:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:34:27.125 [provider-process10] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:23fe4724-1023-4e0c-88a2-50309aeaa355
+2023-03-02 21:34:27.126 [provider-process10] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:23fe4724-1023-4e0c-88a2-50309aeaa355:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:35:08.127 [nioEventLoopGroup-3-2] ERROR c.x.nettyrpc.provider.config.NettyServerHandler - exception:
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:35:15.668 [provider-process13] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:1c328a4b-74ac-4ebe-b9dc-32ef777c81e6
+2023-03-02 21:35:15.669 [provider-process13] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:1c328a4b-74ac-4ebe-b9dc-32ef777c81e6:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:35:46.548 [nioEventLoopGroup-3-3] ERROR c.x.nettyrpc.provider.config.NettyServerHandler - exception:
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:35:57.507 [provider-process15] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.consumer.controller.function.Test,method:test,request id:004bbd52-bd12-4aa6-a589-45195bc94315
+2023-03-02 21:35:57.507 [provider-process15] ERROR c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call exception,request id:004bbd52-bd12-4aa6-a589-45195bc94315:
+com.xiaobai.nettyrpc.common.exceptions.RemoteCallException: no impl find,interface:com.example.consumer.controller.function.Test
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor.process(AsyncProcessor.java:63)
+	at com.xiaobai.nettyrpc.provider.config.AsyncProcessor$$FastClassBySpringCGLIB$$39021a80.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:38:17.523 [nioEventLoopGroup-3-4] ERROR c.x.nettyrpc.provider.config.NettyServerHandler - exception:
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 22:18:22.060 [main] INFO  c.x.nettyrpc.provider.config.ProviderPostProcessor - find provider service:com.example.graduate.provider.impl.TestService
+2023-03-02 22:18:22.550 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - start init server,port:1234
+2023-03-02 22:18:22.618 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - register services success
+2023-03-02 22:19:54.330 [main] INFO  c.x.nettyrpc.provider.config.ProviderPostProcessor - find provider service:com.example.graduate.provider.impl.TestService
+2023-03-02 22:19:54.786 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - start init server,port:1234
+2023-03-02 22:19:54.846 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - register services success
+2023-03-02 22:20:52.286 [provider-process1] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.graduate.provider.Test,method:test,request id:50e4d1c2-fb0a-4f09-b9b5-eb10eff35ff1
+2023-03-02 22:20:52.287 [provider-process1] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call success,client address:/127.0.0.1:51868,request id:50e4d1c2-fb0a-4f09-b9b5-eb10eff35ff1
+2023-03-02 22:21:44.548 [provider-process4] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.graduate.provider.Test,method:test,request id:581f0f87-a355-4908-88ca-9f11d71577ed
+2023-03-02 22:21:44.548 [provider-process4] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call success,client address:/127.0.0.1:51868,request id:581f0f87-a355-4908-88ca-9f11d71577ed

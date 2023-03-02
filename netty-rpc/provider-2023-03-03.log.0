@@ -1,0 +1,10 @@
+2023-03-03 00:25:44.128 [main] INFO  c.x.nettyrpc.provider.config.ProviderPostProcessor - find provider service:com.example.graduate.provider.impl.TestService
+2023-03-03 00:25:44.684 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - start init server,port:1234
+2023-03-03 00:25:44.714 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - register services success
+2023-03-03 00:26:45.560 [provider-process1] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.graduate.provider.Test,method:test,request id:4b9cbe9e-053a-4895-a257-fe4984da186c
+2023-03-03 00:26:45.561 [provider-process1] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call success,client address:/127.0.0.1:54879,request id:4b9cbe9e-053a-4895-a257-fe4984da186c
+2023-03-03 00:26:46.094 [provider-process2] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - accept remote call,consumer name:consumer-demo,interface:com.example.graduate.provider.Test,method:test,request id:25a66560-f415-41ba-b1a2-0f4545bf4e54
+2023-03-03 00:26:46.094 [provider-process2] INFO  c.xiaobai.nettyrpc.provider.config.AsyncProcessor - remote call success,client address:/127.0.0.1:54879,request id:25a66560-f415-41ba-b1a2-0f4545bf4e54
+2023-03-03 00:28:16.409 [main] INFO  c.x.nettyrpc.provider.config.ProviderPostProcessor - find provider service:com.example.graduate.provider.impl.TestService
+2023-03-03 00:28:17.017 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - start init server,port:1234
+2023-03-03 00:28:17.047 [main] INFO  com.xiaobai.nettyrpc.provider.config.NettyServer - register services success

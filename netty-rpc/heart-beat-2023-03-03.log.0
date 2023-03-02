@@ -1,0 +1,7 @@
+2023-03-03 00:27:00.002 [scheduling-1] INFO  c.x.nettyrpc.consumer.heartbeat.ClientHeartBeat - send heart beat to remote server:127.0.0.1:1234
+2023-03-03 00:27:30.002 [scheduling-1] INFO  c.x.nettyrpc.consumer.heartbeat.ClientHeartBeat - send heart beat to remote server:127.0.0.1:1234
+2023-03-03 00:28:00.001 [scheduling-1] INFO  c.x.nettyrpc.consumer.heartbeat.ClientHeartBeat - send heart beat to remote server:127.0.0.1:1234
+2023-03-03 00:29:00.001 [scheduling-1] ERROR c.x.nettyrpc.consumer.heartbeat.ClientHeartBeat - send heart beat error
+2023-03-03 00:29:30.002 [scheduling-1] INFO  c.x.nettyrpc.consumer.heartbeat.ClientHeartBeat - send heart beat to remote server:127.0.0.1:1234
+2023-03-03 00:30:30.004 [scheduling-1] ERROR c.x.nettyrpc.consumer.heartbeat.ClientHeartBeat - send heart beat error
+2023-03-03 00:31:00.004 [scheduling-1] INFO  c.x.nettyrpc.consumer.heartbeat.ClientHeartBeat - send heart beat to remote server:127.0.0.1:1234

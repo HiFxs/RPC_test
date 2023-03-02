@@ -1,9 +1,9 @@
 package com.example.graduate.provider.impl;
 
-import org.springframework.stereotype.Component;
 
 import com.example.graduate.provider.Test;
 import com.xiaobai.nettyrpc.provider.annotations.Service;
+
 
 /**
  * @author HiFxs

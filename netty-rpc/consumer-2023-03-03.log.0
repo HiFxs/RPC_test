@@ -1,0 +1,26 @@
+2023-03-03 00:26:34.105 [main] INFO  c.x.nettyrpc.consumer.config.ConsumerPostProcessor - start init bean:testController,remote call interface:com.example.graduate.provider.Test...
+2023-03-03 00:26:34.105 [main] INFO  c.x.nettyrpc.consumer.config.NettyClientCache - start add netty client cache...
+2023-03-03 00:26:34.106 [main] INFO  c.x.nettyrpc.consumer.config.NettyClientCache - start init netty client,remote server ip:127.0.0.1,port:1234...
+2023-03-03 00:26:34.288 [main] INFO  c.x.nettyrpc.consumer.config.NettyClientCache - init netty client success
+2023-03-03 00:26:34.288 [main] INFO  c.x.nettyrpc.consumer.config.NettyClientCache - add netty client success
+2023-03-03 00:26:34.291 [main] INFO  c.x.nettyrpc.consumer.config.ConsumerPostProcessor - init success
+2023-03-03 00:26:45.495 [http-nio-8081-exec-1] INFO  c.x.nettyrpc.consumer.config.ConsumerPostProcessor - start call remote service:com.example.graduate.provider.Test:test,request id:4b9cbe9e-053a-4895-a257-fe4984da186c
+2023-03-03 00:26:45.576 [http-nio-8081-exec-1] INFO  c.x.nettyrpc.consumer.config.ConsumerPostProcessor - call remote service success,provider name:provider-demo, remote service address:/127.0.0.1:1234
+2023-03-03 00:26:46.091 [http-nio-8081-exec-3] INFO  c.x.nettyrpc.consumer.config.ConsumerPostProcessor - start call remote service:com.example.graduate.provider.Test:test,request id:25a66560-f415-41ba-b1a2-0f4545bf4e54
+2023-03-03 00:26:46.095 [http-nio-8081-exec-3] INFO  c.x.nettyrpc.consumer.config.ConsumerPostProcessor - call remote service success,provider name:provider-demo, remote service address:/127.0.0.1:1234
+2023-03-03 00:27:33.345 [nioEventLoopGroup-2-1] ERROR com.xiaobai.nettyrpc.consumer.config.ClientHandler - remote service /127.0.0.1:1234 throws exception:
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
